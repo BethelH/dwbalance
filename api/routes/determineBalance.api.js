@@ -11,7 +11,6 @@ router.get("/:cardNumber", function (req, res, next) {
     const nonZeroLastDigits = [5, 2];
     const sumIndexStart = 0;
     const sumIndexEnd = 12;
-    var balance = 0;
 
     const cardNumber = req.params.cardNumber;
 
@@ -20,11 +19,12 @@ router.get("/:cardNumber", function (req, res, next) {
     }
 
     const lastDigit = Number(cardNumber.slice(-1));
+    var balance = 0;
 
     if (nonZeroLastDigits.includes(lastDigit)) {
         const digitList = cardNumber.split('').slice(sumIndexStart, sumIndexEnd);
 
-        balance= digitList.reduce((acc, current) => Number(acc) + Number(current))
+        balance = digitList.map(Number).reduce((acc, current) => acc + current);
     }
 
     return res.send(balance.toString());
