@@ -2,17 +2,17 @@ import React from "react";
 
 import { List } from "@mui/material";
 
-import { BalanceItem } from "./BalanceItem";
+import { BalanceItemRow } from "./BalanceItemRow";
 
 const BalanceList = ({ balances, handleDelete }) => {
   return (
     <List>
       {balances.map((entry, _) => (
-        <BalanceItem 
+        <BalanceItemRow 
           balance={entry.balance}
-          cardNumber={entry.cardNumber.slice(-4)}
+          cardNumber={entry.cardNumber}
           key={entry.cardNumber}
-          deleteBalance={handleDelete}
+          handleDelete={handleDelete}
         />
       ))}
     </List>

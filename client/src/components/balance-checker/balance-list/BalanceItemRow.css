@@ -1,24 +1,22 @@
+.BalanceItemRow {
 
-
-
-.BalanceItemRow .MuiListItem-root{
+  .MuiTypography-root {
     color: #292929;
     font-family: Roboto Mono;
     font-size: 14px;
     font-weight: 400;
     line-height: 167.885%;
-    padding:0px 15px;
-  
+  }
 
   .MuiListItem-divider {
     color: #000;
   }
 
-  .BalanceItem-cardInfo {
+  .BalanceItemRow-cardInfo {
     text-align: left;
   }
 
-  .BalanceItem-balanceInfo {
+  .BalanceItemRow-balanceInfo {
     text-align: right;
   }
 }
