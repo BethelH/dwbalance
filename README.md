@@ -16,7 +16,7 @@
 - Create component to show the balance checker component and button
     - Create component to hold list of balances
     - Create component for balance row + formatting
-    - Sort the cards in order of balance {cardNumber, balance} 
+    - Sort the cards in order of balance {cardNumber, balance}
     - Validate on correct format/
 - Test for each component + its validation
 
@@ -37,7 +37,7 @@
 - Modal to ask them to enter the full card number in order to delete it (+ are you sure check)
 - Tests
 - Integration test
-- Testing on additional browsers/device sizes
+- Testing/Screenshots on additional browsers/device sizes
 
 
 
