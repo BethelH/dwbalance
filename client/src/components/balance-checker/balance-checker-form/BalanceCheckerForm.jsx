@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 
 import "./BalanceCheckerForm.css";
-import HeaderEndIcon from "../../resources/images/dicon.svg";
-import { BalanceCheckerInput } from "./balance-checker-input/BalanceCheckerInput";
+import HeaderEndIcon from "../../../resources/images/dicon.svg";
+import { BalanceCheckerInput } from "../balance-checker-input/BalanceCheckerInput";
 
 const BalanceCheckerForm = ({ onClick }) => {
   const [cardNumber, setCardNumber] = useState();
@@ -40,8 +40,6 @@ const BalanceCheckerForm = ({ onClick }) => {
     errorMessage: "Invalid number",
   };
 
-  //Todo make form? validate through that?
-
   return (
     <form className="BalanceCheckerContainer" onSubmit={handleSubmit}>
       <Card className="BalanceCheckerForm">
@@ -60,7 +58,7 @@ const BalanceCheckerForm = ({ onClick }) => {
         />
       </Card>
       {!isValidInput && (
-        <Box className="BalanceChecker-errorMessage">
+        <Box className="ErrorMessage">
           {content.errorMessage}
         </Box>
       )}

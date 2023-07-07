@@ -1,32 +1,22 @@
-import { Component } from 'react';
-import { List } from '@mui/material';
+import React from "react";
 
-import { BalanceItem } from './BalanceItem';
+import { List } from "@mui/material";
 
-class BalanceList extends Component {
-    constructor(props) {
-        super(props);
+import { BalanceItem } from "./BalanceItem";
 
-        this.state = {
-            balances: props.balances
-        };
-        this.handleDelete = this.handleDelete.bind(this);
-    }
+const BalanceList = ({ balances, handleDelete }) => {
+  return (
+    <List>
+      {balances.map((entry, _) => (
+        <BalanceItem 
+          balance={entry.balance}
+          cardNumber={entry.cardNumber.slice(-4)}
+          key={entry.cardNumber}
+          deleteBalance={handleDelete}
+        />
+      ))}
+    </List>
+  );
+};
 
-    handleDelete(cardNumberToRemove) {
-        const remainingBalances = this.balances.filter((balance)=> balance.cardNumber !== cardNumberToRemove);
-        this.setState({ balances: remainingBalances });
-    }
-
-    render() {
-        return (
-            <List>
-                {this.state.balances.map((balance, _) =>
-                    <BalanceItem balance={balance} key={balance.cardNumber} deleteBalance={this.handleDelete} />
-                )}
-            </List>
-        );
-    }
-}
-
-export { BalanceList }
+export { BalanceList };

@@ -1,8 +1,4 @@
 .BalanceCheckerContainer {
-  padding: 15px 19px;
-  width: 345px;
-  position: absolute;
-
   .MuiCard-root {
     border: 1px solid #000000;
     border-radius: 10px;
@@ -68,13 +64,4 @@
 
 .BalanceChecker-button {
   width: 100%;
-}
-
-.BalanceChecker-errorMessage {
-  color: #ff4d00;
-  text-align: center;
-  font-family: Roboto Mono;
-  font-size: 14px;
-  font-weight: 700;
-  padding-bottom:20px;
 }
