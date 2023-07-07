@@ -1,31 +1,41 @@
 import { Component } from 'react';
 import { Box } from '@mui/material'
 
-// import { BalanceList } from './components/balance-list/balance-list'
-import { BalanceChecker } from './components/balance-checker' //todo make a folder
+import "@fontsource/roboto";
+import "@fontsource/roboto-mono";
 
-
+import { BalanceChecker } from './components/balance-checker/BalanceChecker';
+// import {BalanceList} from './components/balance-checker/balance-list/BalanceList';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "" };
+
+    this.state = {
+      balances: [],
+    };
+
+    this.checkCard = this.checkCard.bind(this)
   }
 
-  checkCard({ cardNumber }) {
-    fetch("http://localhost:8000/determineBalanceApi/" + cardNumber)
+  //2222222222222222
+  async checkCard(cardNumber) {
+    const currentBalances = this.state.balances;
+    console.log('currentBalances',currentBalances.length)
+    await fetch("http://localhost:8000/determineBalanceApi/" + cardNumber)
       .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
+      .finally(res => this.setState({ balances: currentBalances.push({ cardNumber, balance: parseInt(res) }) }))
+
+      console.log('afterBalance', this.state.balances.length)
+
   }
 
-  // componentWillMount() {
-  //   this.callAPI();
-  // }
 
   render() {
     return (
-      <Box maxWidth={400} fontFamily={'Roboto Mono'}>
-        <BalanceChecker />
+      <Box >
+        <BalanceChecker onClick={this.checkCard} />
+        {/* <BalanceList balances={this.state.balances} /> */}
       </Box>
     )
   }
