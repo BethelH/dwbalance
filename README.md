@@ -15,8 +15,8 @@ https://github.com/BethelH/dwbalance/assets/9140935/c8d602df-f754-4642-960f-f50c
     - First time using express, was curious about how its structure would let me get a basic route done and testable and found it was quite nice. A bit heavy on the boilerplate and built-in comments but had a quick turnaround to hitting an api locally.
 
 ##### Frontend
-- Spun up quickly with the [create react Aap](https://github.com/facebook/create-react-app) package.
-    - This is one of the quickest ways to get a singe page react app off the ground
+- Spun up quickly with the [create react App](https://github.com/facebook/create-react-app) package.
+    - Its is one of the quickest ways to get a single page react app off the ground for a small project
 - [MaterialUI](https://mui.com/material-ui) for a styling/component library
     - Some prior experience with this component library, styling is a bit complicated since there are a handful of ways to go about it but pretty quick to get standard uis ready
 
