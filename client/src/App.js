@@ -25,7 +25,7 @@ const App = () => {
     setIsDuplicateError(duplicateFound);
 
     if (!duplicateFound) {
-      await fetch("http://localhost:8000/determineBalanceApi/" + cardNumber)
+      await fetch("/determineBalanceApi/" + cardNumber)
         .then((response) => {
           if (isNxxStatus({ status: response.status, n: 5 })) {
             throw new Error(`Bad server response: ${response.status}`);
