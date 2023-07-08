@@ -1,5 +1,5 @@
 # Balance Checker
-<img src="./resources/readme/balance-checker-homepage">
+<img src="./resources/readme/balance-checker-homepage.png">
 
 ### Libraries/Frameworks used
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -9,7 +9,7 @@
 
 ### Planning
 
-<img src="./resources/readme/planning">
+<img src="./resources/readme/planning.png">
 
 
 ##### Frontend 'ticket' breakdown
