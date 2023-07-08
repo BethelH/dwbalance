@@ -52,6 +52,8 @@ https://github.com/BethelH/dwbalance/assets/9140935/c8d602df-f754-4642-960f-f50c
 - Modal to ask them to enter the full card number in order to delete it (+ are you sure check)
 - Integration test
 - Testing/Screenshots on a set of expected devices for use
+- Breaking determineBalance code from the router into a set of functions in a handler
+- Add jest as a dep for the api and write unit tests
 
 
 
