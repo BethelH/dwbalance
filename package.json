@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Balance Checking App",
   "main": "index.js",
+  "engines": {
+    "node": "v16.14.0"
+  },
   "scripts": {
     "start": "cd api && node app.js"
   },
