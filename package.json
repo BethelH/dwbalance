@@ -1,0 +1,11 @@
+{
+  "name": "dwbalance",
+  "version": "1.0.0",
+  "description": "Balance Checking App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no  top level tests\" && exit 1"
+  },
+  "author": "BethelH",
+  "license": "ISC"
+}
