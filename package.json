@@ -4,6 +4,7 @@
   "description": "Balance Checking App",
   "main": "index.js",
   "scripts": {
+    "start": "node .api/bin/www",
     "test": "echo \"Error: no  top level tests\" && exit 1"
   },
   "author": "BethelH",
