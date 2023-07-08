@@ -4,8 +4,7 @@ var path = require('path');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-    console.log(path.join(__dirname, '../client/build/index.html'));
-    res.sendFile('../../client/build/index.html')
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
 });
 
 router.get("determineBalanceAPi/:cardNumber", function (req, res, next) {
