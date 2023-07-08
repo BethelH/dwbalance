@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require("cors");
 
 var routes = require('./routes');
-// var determineBalanceAPiRouter = require("./routes");
 
 var app = express();
 
