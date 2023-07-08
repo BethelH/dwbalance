@@ -5,25 +5,22 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 
-var indexRouter = require('./routes/index');
-var determineBalanceAPiRouter = require("./routes/determineBalance.api");
+var routes = require('./routes');
+// var determineBalanceAPiRouter = require("./routes");
 
 var app = express();
 
 // view engine setup
-// app.set('views', path.join(__dirname, '../client/build/index.html'));
-// app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../client/build/index.html')));
+// app.use(express.static(path.join(__dirname, '../client/build/index.html')));
 
-app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-app.use("/determineBalanceAPi", determineBalanceAPiRouter);
+app.get(['/', "/determineBalanceAPi"], routes);
 
 // catch 404 and forward to error handler
 app.use(function(_, _, next) {
@@ -38,7 +35,7 @@ app.use(function(err, req, res, _) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
 });
 
 module.exports = app;

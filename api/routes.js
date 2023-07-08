@@ -1,7 +1,14 @@
 var express = require("express");
+var path = require('path');
+
 var router = express.Router();
 
-router.get("/:cardNumber", function (req, res, next) {
+router.get('/', function (req, res, next) {
+    console.log(path.join(__dirname, '../client/build/index.html'));
+    res.sendFile('../../client/build/index.html')
+});
+
+router.get("determineBalanceAPi/:cardNumber", function (req, res, next) {
     const validCardLength = 16;
     const nonZeroLastDigits = [5, 2];
     const sumIndexStart = 0;
