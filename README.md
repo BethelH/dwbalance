@@ -1,10 +1,12 @@
 # Balance Checker
 
-https://github.com/BethelH/dwbalance/assets/9140935/4b10d0b6-a161-4fe3-b364-97456ec8a719
-
-
 Simple balance checker that accepts 16 digits and returns a balance.
 [Figma Mockup/Reqs](https://www.figma.com/file/47Ou1LPfOYkP7gRrRG3ECZ/Developer-Exercise----Bethel-Hailu?node-id=2%3A11&mode=dev)
+
+##Demo
+
+https://github.com/BethelH/dwbalance/assets/9140935/4b10d0b6-a161-4fe3-b364-97456ec8a719
+
 
 ### Libraries/Frameworks used
 
