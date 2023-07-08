@@ -4,8 +4,16 @@
   "description": "Balance Checking App",
   "main": "index.js",
   "scripts": {
-    "start": "node .api/bin/www",
-    "test": "echo \"Error: no  top level tests\" && exit 1"
+    "start": "cd api && node app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
   },
   "author": "BethelH",
   "license": "ISC"

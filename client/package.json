@@ -17,8 +17,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-client": "react-scripts start",
+    "build": "react-scripts build && (cd ../api && npm install",
     "test": "react-scripts test --all --detectOpenHandles",
     "eject": "react-scripts eject"
   },
