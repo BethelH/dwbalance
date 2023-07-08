@@ -1,0 +1,14 @@
+.BalanceCheckerApp {
+  padding: 15px 19px;
+  width: 345px;
+  position: absolute;
+}
+
+.ErrorMessage {
+  color: #ff4d00;
+  text-align: center;
+  font-family: Roboto Mono;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom:20px;
+}
