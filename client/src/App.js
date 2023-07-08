@@ -8,6 +8,7 @@ import "@fontsource/roboto-mono";
 import "./App.css"
 import { BalanceCheckerForm } from './components/balance-checker/balance-checker-form/BalanceCheckerForm';
 import { BalanceList } from './components/balance-checker/balance-list/BalanceList';
+import { isNxxStatus } from './lib/status-helper';
 
 const App = () => {
   const [balances, setBalances] = useState([]);
@@ -24,11 +25,19 @@ const App = () => {
     setIsDuplicateError(duplicateFound);
 
     if (!duplicateFound) {
-      const response = await fetch("http://localhost:8000/determineBalanceApi/" + cardNumber)
-      const cardBalance = await response.text()
+      await fetch("http://localhost:8000/determineBalanceApi/" + cardNumber)
+        .then((response) => {
+          if (isNxxStatus({ status: response.status, n: 5 })) {
+            throw new Error(`Bad server response: ${response.status}`);
+          }
 
-      const updatedBalances = [...balances, { cardNumber, balance: parseInt(cardBalance) }]
-      setBalances(sortby(updatedBalances, 'balance').reverse());
+          return response.json();
+        }).then((cardBalance) => {
+          const updatedBalances = [...balances, { cardNumber, balance: parseInt(cardBalance) }]
+          setBalances(sortby(updatedBalances, 'balance').reverse());
+        }).catch((error) => {
+          alert(`Caught an unexpected error ${error}`);
+        });
     }
   };
 

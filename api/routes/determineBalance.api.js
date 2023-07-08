@@ -1,11 +1,6 @@
 var express = require("express");
 var router = express.Router();
 
-//Todo:
-/**
- * Split into functions
- * Consider not using express for BE
- */
 router.get("/:cardNumber", function (req, res, next) {
     const validCardLength = 16;
     const nonZeroLastDigits = [5, 2];
@@ -27,7 +22,7 @@ router.get("/:cardNumber", function (req, res, next) {
         balance = digitList.map(Number).reduce((acc, current) => acc + current);
     }
 
-    return res.send(balance.toString());
+    return res.send({ balance });
 });
 
 module.exports = router;

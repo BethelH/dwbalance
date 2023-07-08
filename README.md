@@ -1,7 +1,7 @@
 # Balance Checker
-<img src="./resources/readme/balance-checker">
+<img src="./resources/readme/balance-checker-homepage">
 
-## Libraries/Frameworks used
+### Libraries/Frameworks used
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - Backend Framework [ExpressJs](https://github.com/facebook/create-react-app), Bootstrapped using [Express Generator](https://expressjs.com/en/starter/generator.html)
 - [MaterialUI](https://mui.com/material-ui) for a styling/component library
@@ -9,7 +9,7 @@
 
 ### Planning
 
-<img src="./resources/readme/planning-sketch">
+<img src="./resources/readme/planning">
 
 
 ##### Frontend 'ticket' breakdown
