@@ -19,7 +19,7 @@ describe('App', () => { // Need tests for: adding stuff to the balance form comp
       $getButton: () => screen.getByRole('button', { name: appContent.cta })
     }
   }
-  test('renders the initial balance checker app screen', () => {
+  it('should render the initial balance checker app screen', () => {
     const { $queryByText, $getByText, $getInput, $getButton } = renderApp();
 
     expect($getByText(appContent.header)).toBeVisible()
@@ -27,5 +27,20 @@ describe('App', () => { // Need tests for: adding stuff to the balance form comp
     expect($queryByText(appContent.errorMessage)).not.toBeInTheDocument()
     expect($getInput()).toBeVisible()
     expect($getButton()).toBeVisible()
+  });
+
+  //Relevant test cases
+  test.skip('should not update the visible list on receiving an error from the api', () => {
+  });
+
+  test.skip('should show error message on duplicate card numbers checked', () => {
+  });
+   test.skip('should show list of balances in sorted order', () => {
+  });
+
+  test.skip('should show list of balances in sorted order if items are added', () => {
+  });
+
+  test.skip('should show list of balances in sorted order if items are removed', () => {
   });
 });
