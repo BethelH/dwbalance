@@ -5,7 +5,7 @@ Simple balance checker that accepts 16 digits and returns a balance.
 
 ##Demo
 
-https://github.com/BethelH/dwbalance/assets/9140935/4b10d0b6-a161-4fe3-b364-97456ec8a719
+https://github.com/BethelH/dwbalance/assets/9140935/c8d602df-f754-4642-960f-f50c803ec6a6
 
 
 ### Libraries/Frameworks used
