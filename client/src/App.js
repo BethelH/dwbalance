@@ -25,7 +25,7 @@ const App = () => {
     setIsDuplicateError(duplicateFound);
 
     if (!duplicateFound) {
-      await fetch("/determineBalanceApi/" + cardNumber)
+      await fetch(`/determineBalance/${cardNumber}`)
         .then((response) => {
           if (isNxxStatus({ status: response.status, n: 5 })) {
             throw new Error(`Bad server response: ${response.status}`);
@@ -33,10 +33,10 @@ const App = () => {
 
           return response.json();
         }).then((cardBalance) => {
-          const updatedBalances = [...balances, { cardNumber, balance: parseInt(cardBalance) }]
+          const updatedBalances = [...balances, { cardNumber, balance: parseInt(cardBalance.balance) }]
           setBalances(sortby(updatedBalances, 'balance').reverse());
         }).catch((error) => {
-          alert(`Caught an unexpected error ${error}`);
+          console.error(`Caught an unexpected error ${error}`);
         });
     }
   };

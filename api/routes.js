@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     res.sendFile(path.join(__dirname, '../client/build/index.html'))
 });
 
-router.get("determineBalanceAPi/:cardNumber", function (req, res, next) {
+router.get("/determineBalance/:cardNumber", function (req, res, next) {
     const validCardLength = 16;
     const nonZeroLastDigits = [5, 2];
     const sumIndexStart = 0;

@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-app.get(['/', "/determineBalanceAPi"], routes);
+app.get(['/', "/determineBalance/:cardNumber"], routes);
 
 // catch 404 and forward to error handler
 app.use(function(_, _, next) {
