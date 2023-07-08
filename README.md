@@ -29,8 +29,8 @@ https://github.com/BethelH/dwbalance/assets/9140935/4b10d0b6-a161-4fe3-b364-9745
 - Create component to show the balance checker component and button
     - Create component to hold list of balances
     - Create component for balance row + formatting
-    - Sort the cards in order of balance {cardNumber, balance}
-    - Validate on correct format/
+    - Sort the cards in order of balance 
+    - Validate on correct format
 - Test for each component + its validation
 
 ##### Backend 'ticket' breakdown
